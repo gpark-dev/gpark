@@ -1,0 +1,12 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* look at this later https://gwfh.mranftl.com/fonts */
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: light;
+  font-size: 20px;
+}/*# sourceMappingURL=home.css.map */

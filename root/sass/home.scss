@@ -1,0 +1,9 @@
+@use 'styleguide' as *;
+
+body {
+    font: {
+        family: $bodyfont;
+        weight: light;
+        size: 20px;
+    } 
+}

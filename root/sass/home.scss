@@ -4,32 +4,23 @@ body {
     font: {
         family: $bodyfont;
         weight: $fontExtraLight;
-        size: 16px;
+        size: 1.5em;
     } 
 }
 
 header {
     font: {
         family: 'Overpass Mono', monospace;
-        size: 50px;
+        size: 4em;
         weight: $fontBold;
     }
+    display: block;
 }
 
-#typing {
-  font-size: 32px;
-  font-weight: bold;
-  font-family: Verdana;
-  color: white;
-  display: block;
+#typewriting {
+  font-size: 0.6em;
 }
 
-.caret {
-  width: 2px;
-  height: 32px;
-  margin-bottom: -4px;
-  
-  overflow: hidden;
-  background-color: teal;
-  display: inline-block;
+#cursor {
+  color: #19ca56; //placeholder
 }

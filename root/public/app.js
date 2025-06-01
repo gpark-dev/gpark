@@ -1,42 +1,57 @@
-let textBase = "";
-let repeatText = ["illustrator", "web developer", "designer"];
-let index = 0; 
-let i = 0; 
-let deleting = false; 
-let typeText = $("#typing-text"); 
+let textBase = " is a";
+let repeatText = ["n illustrator", " web developer", " designer"];
+let index = 0;
+let i = -1; //because at 0 the initial HTML is empty (undefined) and skips a letter
+let deleting = false;
 
 function typeWrite() {
-  console.log("running?!");
-  var textJitter = Math.floor(Math.random()*(70-45) + 45); 
-  if (deleting) {
-    if (typeText.html().length > textBase.length) {
-      typeText.html(typeText.html().slice(0, -1));
-      setTimeout(typeWrite, textJitter); 
-      console.log(typeText);
-    }
-    else {
-      index = (index+1)%2; 
-      deleting = false; 
-      setTimeout(typeWrite, 1000); 
-      console.log(deleting);
-    }
+  console.log("start");
+  console.log(i);
+  var textJitter = Math.floor(Math.random() * (70 - 45) + 45);
+  if (index > 2) {
+    index = 0; 
   }
-
+  //deleting
+  if (deleting) {
+    if ($("#typing-text").html().length > textBase.length) {
+      $("#typing-text").html($("#typing-text").html().slice(0, -1));
+      setTimeout(typeWrite, textJitter);
+    } 
+    else {
+      index++; 
+      deleting = false;
+      setTimeout(typeWrite, 1000);
+    }
+  } 
+  //typing
   else {
     if (i === (textBase + repeatText[index]).length) {
-      i = textBase.length; 
+      i = textBase.length-1;
       deleting = true;
       setTimeout(typeWrite, 2500);
-      console.log(i); 
-    }
+    } 
     else {
-      if (i < (textBase + repeatText[index]).length) {
-        typeText.html(typeText.html() + (textBase + repeatText[index])).charAt(i); 
-        i++; 
-        setTimeout(typeWrite, textJitter);
-      }
-      console.log(i); 
+      $("#typing-text").html(
+        $("#typing-text").html() + (textBase + repeatText[index]).charAt(i)
+      );
+      console.log($("#typing-text").html());
+      setTimeout(typeWrite, textJitter);
     }
+    i++;
   }
 }
-typeWrite(); 
+
+//cursor blinking effect
+var blink = true; 
+setInterval(() => {
+  if (blink){
+    $("#cursor").css("opacity", "0");
+    blink = false;
+  }
+  else {
+    $("#cursor").css("opacity",  "1");
+    blink = true; 
+  }
+}, 420);
+
+typeWrite();

@@ -1,9 +1,14 @@
+@use 'allFonts' as *;
+
 html,
 body {
     margin: 0;
     padding: 0;
 }
 
-/* look at this later https://gwfh.mranftl.com/fonts */
-
+$fontNormal: 400;
+$fontLight: 300;
+$fontExtraLight: 200;
+$fontBold: 700;
 $bodyfont: 'Nunito Sans', sans-serif;
+$titlefont: 'Bayon', sans-serif;

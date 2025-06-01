@@ -3,7 +3,33 @@
 body {
     font: {
         family: $bodyfont;
-        weight: light;
-        size: 20px;
+        weight: $fontExtraLight;
+        size: 16px;
     } 
+}
+
+header {
+    font: {
+        family: 'Overpass Mono', monospace;
+        size: 50px;
+        weight: $fontBold;
+    }
+}
+
+#typing {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Verdana;
+  color: white;
+  display: block;
+}
+
+.caret {
+  width: 2px;
+  height: 32px;
+  margin-bottom: -4px;
+  
+  overflow: hidden;
+  background-color: teal;
+  display: inline-block;
 }

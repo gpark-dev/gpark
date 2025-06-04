@@ -5,8 +5,8 @@ let i = -1; //because at 0 the initial HTML is empty (undefined) and skips a let
 let deleting = false;
 
 function typeWrite() {
-  console.log("start");
-  console.log(i);
+  // console.log("start");
+  // console.log(i);
   var textJitter = Math.floor(Math.random() * (70 - 45) + 45);
   if (index > 2) {
     index = 0; 
@@ -34,7 +34,7 @@ function typeWrite() {
       $("#typing-text").html(
         $("#typing-text").html() + (textBase + repeatText[index]).charAt(i)
       );
-      console.log($("#typing-text").html());
+      // console.log($("#typing-text").html());
       setTimeout(typeWrite, textJitter);
     }
     i++;

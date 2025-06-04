@@ -150,9 +150,13 @@ body {
 }
 
 body {
+  background-color: wheat;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 200;
   font-size: 1.5em;
+}
+body .darkMode {
+  background-color: black !important;
 }
 
 header {

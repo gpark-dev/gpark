@@ -1,12 +1,17 @@
 @use 'styleguide' as *;
 
 body {
+  background-color: wheat;
     font: {
         family: $bodyfont;
         weight: $fontExtraLight;
         size: 1.5em;
     } 
+  .darkMode {
+    background-color: black !important; 
+  }
 }
+
 
 header {
     font: {
